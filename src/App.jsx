@@ -17,16 +17,6 @@ import {
 } from "./firebase";
 import toast, { Toaster } from "react-hot-toast";
 
-// Import social media icons
-import googleIcon from "assets/icons/google-icon-logo-svgrepo-com.svg";
-import githubIcon from "assets/icons/github-142-svgrepo-com.svg";
-import twitterIcon from "assets/icons/twitter-color-svgrepo-com.svg";
-import facebookIcon from "assets/icons/facebook-svgrepo-com.svg";
-import microsoftIcon from "assets/icons/microsoft-svgrepo-com.svg";
-import appleIcon from "assets/icons/apple-173-svgrepo-com.svg";
-import eyeIcon from "assets/icons/eye-svgrepo-com.svg";
-import eyeOffIcon from "assets/icons/eye-off-svgrepo-com.svg";
-
 function App() {
   // State variables
   const [user, setUser] = useState(null); // Store the logged-in user
@@ -77,13 +67,14 @@ function App() {
             "Network error. Check your internet connection and try again.";
           break;
         case "auth/account-exists-with-different-credential":
-          message ="This email is already linked to another sign-in method (e.g., Google or GitHub). Please use the method you signed up with.";
+          message =
+            "This email is already linked to another sign-in method (e.g., Google or GitHub). Please use the method you signed up with.";
           break;
 
         default:
           // Generic fallback message for unknown errors
           message = "Something went wrong. Please try again later.";
-            // message = `An error occurred: ${error.message}`;
+        // message = `An error occurred: ${error.message}`;
       }
 
       // Display the error message to the user
@@ -187,42 +178,66 @@ function App() {
               onClick={() => handleLogin(googleProvider, "Google")}
               className="btn-social"
             >
-              <img src={googleIcon} alt="Google" className="icon" />
+              <img
+                src="assets/icons/google-icon-logo-svgrepo-com.svg"
+                alt="Google"
+                className="icon"
+              />
               Google
             </button>
             <button
               onClick={() => handleLogin(githubProvider, "GitHub")}
               className="btn-social "
             >
-              <img src={githubIcon} alt="GitHub" className="icon" />
+              <img
+                src="assets/icons/github-142-svgrepo-com.svg"
+                alt="GitHub"
+                className="icon"
+              />
               GitHub
             </button>
             <button
               onClick={() => handleLogin(twitterProvider, "Twitter")}
               className="btn-social"
             >
-              <img src={twitterIcon} alt="Twitter" className="icon" />
+              <img
+                src="assets/icons/twitter-color-svgrepo-com.svg"
+                alt="Twitter"
+                className="icon"
+              />
               Twitter / X
             </button>
             <button
               onClick={() => handleLogin(facebookProvider, "Facebook")}
               className="btn-social"
             >
-              <img src={facebookIcon} alt="Facebook" className="icon" />
+              <img
+                src="assets/icons/facebook-svgrepo-com.svg"
+                alt="Facebook"
+                className="icon"
+              />
               Facebook
             </button>
             <button
               onClick={() => handleLogin(microsoftProvider, "Microsoft")}
               className="btn-social"
             >
-              <img src={microsoftIcon} alt="Microsoft" className="icon" />
+              <img
+                src="assets/icons/microsoft-svgrepo-com.svg"
+                alt="Microsoft"
+                className="icon"
+              />
               Microsoft
             </button>
             <button
               onClick={() => handleLogin(appleProvider, "Apple")}
               className="btn-social"
             >
-              <img src={appleIcon} alt="Apple" className="icon" />
+              <img
+                src="assets/icons/apple-173-svgrepo-com.svg"
+                alt="Apple"
+                className="icon"
+              />
               Apple
             </button>
           </div>
@@ -298,7 +313,11 @@ function App() {
                 className="absolute right-3 top-1 transform-translate-y-1 focus:outline-none"
               >
                 <img
-                  src={showPassword ? eyeOffIcon : eyeIcon}
+                  src={
+                    showPassword
+                      ? "assets/icons/eye-off-svgrepo-com.svg"
+                      : "assets/icons/eye-svgrepo-com.svg"
+                  }
                   alt="Toggle password visibility"
                   className="w-5 h-5"
                 />
