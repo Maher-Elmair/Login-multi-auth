@@ -18,14 +18,14 @@ import {
 import toast, { Toaster } from "react-hot-toast";
 
 // Import social media icons
-import googleIcon from "./assets/icons/google-icon-logo-svgrepo-com.svg";
-import githubIcon from "./assets/icons/github-142-svgrepo-com.svg";
-import twitterIcon from "./assets/icons/twitter-color-svgrepo-com.svg";
-import facebookIcon from "./assets/icons/facebook-svgrepo-com.svg";
-import microsoftIcon from "./assets/icons/microsoft-svgrepo-com.svg";
-import appleIcon from "./assets/icons/apple-173-svgrepo-com.svg";
-import eyeIcon from "./assets/icons/eye-svgrepo-com.svg";
-import eyeOffIcon from "./assets/icons/eye-off-svgrepo-com.svg";
+import googleIcon from "assets/icons/google-icon-logo-svgrepo-com.svg";
+import githubIcon from "assets/icons/github-142-svgrepo-com.svg";
+import twitterIcon from "assets/icons/twitter-color-svgrepo-com.svg";
+import facebookIcon from "assets/icons/facebook-svgrepo-com.svg";
+import microsoftIcon from "assets/icons/microsoft-svgrepo-com.svg";
+import appleIcon from "assets/icons/apple-173-svgrepo-com.svg";
+import eyeIcon from "assets/icons/eye-svgrepo-com.svg";
+import eyeOffIcon from "assets/icons/eye-off-svgrepo-com.svg";
 
 function App() {
   // State variables
@@ -170,13 +170,13 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center flex-col w-ful h-screen ">
+    <div className="flex items-center justify-center flex-col w-full">
       {/* Toast notifications container */}
       <Toaster position="bottom-center" />
 
       {/* If user is NOT logged in, show login/sign-up form */}
       {!user ? (
-        <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 sm:w-[100vw] w-full max-w-md text-center">
+        <div className="bg-white shadow-lg rounded-xl p-6 m-6 sm:m-8 sm:p-8 sm:w-[100vw] w-full max-w-md text-center">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">
             {isSignUp ? "Create a New Account" : "Log In"}
           </h2>
